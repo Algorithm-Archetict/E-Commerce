@@ -1,0 +1,20 @@
+.nav {
+    background-color: var(--white);
+    padding: 1rem;
+    box-shadow: 0 2px 4px var(--shadow);
+    position: sticky;
+    top: 72px;
+    z-index: 900;
+}
+
+.nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: var(--primary);
+}

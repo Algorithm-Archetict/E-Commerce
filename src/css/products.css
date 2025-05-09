@@ -1,0 +1,135 @@
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 12px var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px var(--shadow);
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-card p {
+    color: var(--text);
+    margin-bottom: 1rem;
+}
+
+.search-input {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.category-buttons {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+    scrollbar-width: none;
+}
+
+.category-buttons::-webkit-scrollbar {
+    display: none;
+}
+
+.category-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    min-width: 150px;
+}
+
+.category-button img {
+    width: 120px;
+    height: 90px;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+}
+
+.category-button.active {
+    background-color: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+.category-button:hover {
+    background-color: var(--primary-dark);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.category-products h3 {
+    margin: 1.5rem 0;
+    font-size: 1.75rem;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hero img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 12px;
+    color: var(--white);
+}
+
+@media (max-width: 768px) {
+    .category-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category-button {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}

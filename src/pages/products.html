@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - E-commerce Platform</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/colors.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/products.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <img src="../assets/images/logo.png" alt="E-commerce Logo" class="logo">
+            <h1>E-commerce Platform</h1>
+            <div id="user-info" class="user-info"></div>
+        </div>
+    </header>
+    <nav class="nav">
+        <a href="home.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart</a>
+        <a href="dashboard.html" id="dashboard-link" class="hidden">Dashboard</a>
+        <a href="profile.html" id="profile-link" class="hidden">Profile</a>
+        <a href="login.html" id="login-link">Login</a>
+        <a href="register.html" id="register-link">Register</a>
+        <a href="#" id="logout-link" class="hidden">Logout</a>
+    </nav>
+    <main class="content">
+        <h2>Products</h2>
+        <input type="text" id="search" class="search-input" placeholder="Search products...">
+        <div id="product-grid" class="product-grid"></div>
+    </main>
+    <footer class="footer">
+        <p>© 2025 E-commerce Platform. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+    </footer>
+    <script src="../js/main.js" type="module"></script>
+</body>
+</html>

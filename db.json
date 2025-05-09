@@ -1,0 +1,228 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Electronics",
+      "image": "https://via.placeholder.com/200x150?text=Electronics"
+    },
+    {
+      "id": 2,
+      "name": "Clothing",
+      "image": "https://via.placeholder.com/200x150?text=Clothing"
+    },
+    {
+      "id": 3,
+      "name": "Books",
+      "image": "https://via.placeholder.com/200x150?text=Books"
+    },
+    {
+      "id": 4,
+      "name": "Home & Kitchen",
+      "image": "https://via.placeholder.com/200x150?text=Home+Kitchen"
+    },
+    {
+      "id": 5,
+      "name": "Toys & Games",
+      "image": "https://via.placeholder.com/200x150?text=Toys+Games"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Smartphone",
+      "price": 599.99,
+      "category": "Electronics",
+      "image": "https://via.placeholder.com/150",
+      "sellerId": 2,
+      "status": "approved",
+      "salesCount": 150
+    },
+    {
+      "id": 2,
+      "name": "Laptop",
+      "price": 999.99,
+      "category": "Electronics",
+      "image": "https://via.placeholder.com/150",
+      "sellerId": 2,
+      "status": "approved",
+      "salesCount": 100
+    },
+    {
+      "id": 3,
+      "name": "T-Shirt",
+      "price": 19.99,
+      "category": "Clothing",
+      "image": "https://via.placeholder.com/150",
+      "sellerId": 2,
+      "status": "approved",
+      "salesCount": 200
+    },
+    {
+      "id": 4,
+      "name": "Jeans",
+      "price": 49.99,
+      "category": "Clothing",
+      "image": "https://via.placeholder.com/150",
+      "sellerId": 2,
+      "status": "approved",
+      "salesCount": 50
+    },
+    {
+      "id": 5,
+      "name": "Novel",
+      "price": 14.99,
+      "category": "Books",
+      "image": "https://via.placeholder.com/150",
+      "sellerId": 2,
+      "status": "approved",
+      "salesCount": 300
+    },
+    {
+      "id": 6,
+      "name": "Cookbook",
+      "price": 24.99,
+      "category": "Books",
+      "image": "https://via.placeholder.com/150",
+      "sellerId": 2,
+      "status": "approved",
+      "salesCount": 80
+    },
+    {
+      "id": 7,
+      "name": "Blender",
+      "price": 79.99,
+      "category": "Home & Kitchen",
+      "image": "https://via.placeholder.com/150",
+      "sellerId": 2,
+      "status": "approved",
+      "salesCount": 120
+    },
+    {
+      "id": 8,
+      "name": "Pots Set",
+      "price": 89.99,
+      "category": "Home & Kitchen",
+      "image": "https://via.placeholder.com/150",
+      "sellerId": 2,
+      "status": "approved",
+      "salesCount": 60
+    },
+    {
+      "id": 9,
+      "name": "Board Game",
+      "price": 29.99,
+      "category": "Toys & Games",
+      "image": "https://via.placeholder.com/150",
+      "sellerId": 2,
+      "status": "approved",
+      "salesCount": 90
+    },
+    {
+      "id": 10,
+      "name": "Action Figure",
+      "price": 15.99,
+      "category": "Toys & Games",
+      "image": "https://via.placeholder.com/150",
+      "sellerId": 2,
+      "status": "approved",
+      "salesCount": 30
+    },
+    {
+      "name": "Macbook",
+      "price": 1000,
+      "category": "Electronics",
+      "image": "https://via.placeholder.com/150",
+      "sellerId": 2,
+      "status": "approved",
+      "salesCount": 0,
+      "id": 11
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "username": "seller1",
+      "password": "seller123",
+      "role": "seller"
+    },
+    {
+      "id": 3,
+      "username": "customer1",
+      "password": "customer123",
+      "role": "customer"
+    },
+    {
+      "username": "customer7",
+      "password": "customer123",
+      "role": "customer",
+      "id": 4
+    }
+  ],
+  "orders": [
+    {
+      "userId": 3,
+      "items": [
+        {
+          "productId": "1",
+          "quantity": 1,
+          "price": 599.99
+        }
+      ],
+      "status": "pending",
+      "id": 1
+    },
+    {
+      "userId": 3,
+      "items": [
+        {
+          "productId": "1",
+          "quantity": 3,
+          "price": 599.99
+        },
+        {
+          "productId": "3",
+          "quantity": 2,
+          "price": 19.99
+        }
+      ],
+      "status": "pending",
+      "id": 2
+    },
+    {
+      "userId": 3,
+      "items": [
+        {
+          "productId": "1",
+          "quantity": 1,
+          "price": 599.99
+        },
+        {
+          "productId": "2",
+          "quantity": 1,
+          "price": 999.99
+        }
+      ],
+      "status": "pending",
+      "id": 3
+    },
+    {
+      "userId": 3,
+      "items": [
+        {
+          "productId": "1",
+          "quantity": 1,
+          "price": 599.99
+        }
+      ],
+      "status": "pending",
+      "id": 4
+    }
+  ],
+  "reviews": []
+}
