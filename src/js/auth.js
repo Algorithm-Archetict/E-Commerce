@@ -1,6 +1,6 @@
 const API_URL = 'http://localhost:3000';
 
-export async function login(username, password) {
+export async function login(username, password) {   //TODO: (username || email) && password
     try {
         const response = await fetch(`${API_URL}/users?username=${username}&password=${password}`);
         if (!response.ok) throw new Error('Failed to fetch users');
@@ -12,7 +12,7 @@ export async function login(username, password) {
     }
 }
 
-export async function register(user) {
+export async function register(user) {  //TODO: email
     try {
         const checkResponse = await fetch(`${API_URL}/users?username=${user.username}`);
         if (!checkResponse.ok) throw new Error('Failed to check username');

@@ -141,27 +141,45 @@
   "users": [
     {
       "id": 1,
-      "username": "admin",
+      "fName": "Mohamed",
+      "lName": "Ibrahim",
+      "email": "elgabry1@gmail.com",
+      "username": "elgabry1",
       "password": "admin123",
       "role": "admin"
     },
     {
       "id": 2,
+      "fName": "Mohamed",
+      "lName": "Reda",
+      "email": "moreda74@gmail.com",
+      "username": "moreda74",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": 3,
+      "fName": "Mohamed",
+      "lName": "Ahmed",
+      "email": "moahmed@gmail.com",
       "username": "seller1",
       "password": "seller123",
       "role": "seller"
     },
     {
-      "id": 3,
+      "id": 4,
       "username": "customer1",
       "password": "customer123",
       "role": "customer"
     },
     {
+      "id": 5,
+      "fName": "Sara",
+      "lName": "Ahmed",
+      "email": "sara4@gmail.com",
       "username": "customer7",
       "password": "customer123",
-      "role": "customer",
-      "id": 4
+      "role": "customer"
     }
   ],
   "orders": [
