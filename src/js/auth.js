@@ -1,9 +1,15 @@
 const API_URL = 'http://localhost:3000';
 
-export async function login(username, password) {   //TODO: (username || email) && password
+export async function login(identifier, password) {
     try {
-        const response = await fetch(`${API_URL}/users?username=${username}&password=${password}`);
+        // Simple regex to check if input is an email
+        const isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(identifier);
+        const queryParam = isEmail ? `email=${encodeURIComponent(identifier)}` : `username=${encodeURIComponent(identifier)}`;
+        
+        const response = await fetch(`${API_URL}/users?${queryParam}&password=${encodeURIComponent(password)}`);
+        
         if (!response.ok) throw new Error('Failed to fetch users');
+        
         const users = await response.json();
         return users.length > 0 ? users[0] : null;
     } catch (error) {
@@ -11,6 +17,7 @@ export async function login(username, password) {   //TODO: (username || email) 
         return null;
     }
 }
+
 
 export async function register(user) {  //TODO: email
     try {

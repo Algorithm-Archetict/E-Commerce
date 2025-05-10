@@ -107,9 +107,9 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (page === 'login.html') {
         getElement('#login-form')?.addEventListener('submit', async (e) => {
             e.preventDefault();
-            const username = getElement('#login-username').value;
+            const identifier = getElement('#login-identifier').value;   // Can be username or email
             const password = getElement('#login-password').value;
-            const user = await login(username, password);
+            const user = await login(identifier, password);
             if (user) {
                 currentUser = user;
                 localStorage.setItem('currentUser', JSON.stringify(currentUser));
