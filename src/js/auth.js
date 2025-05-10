@@ -2,7 +2,6 @@ const API_URL = 'http://localhost:3000';
 
 export async function login(identifier, password) {
     try {
-        // Simple regex to check if input is an email
         const isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(identifier);
         const queryParam = isEmail ? `email=${encodeURIComponent(identifier)}` : `username=${encodeURIComponent(identifier)}`;
         
@@ -19,12 +18,17 @@ export async function login(identifier, password) {
 }
 
 
-export async function register(user) {  //TODO: email
+export async function register(user) {
     try {
-        const checkResponse = await fetch(`${API_URL}/users?username=${user.username}`);
-        if (!checkResponse.ok) throw new Error('Failed to check username');
+        const checkResponse = await fetch(`${API_URL}/users?username=${encodeURIComponent(user.username)}&email=${encodeURIComponent(user.email)}`);
+        if (!checkResponse.ok) throw new Error('Failed to check existing users');
+
         const existingUsers = await checkResponse.json();
-        if (existingUsers.length > 0) return false;
+
+        const isTaken = existingUsers.some(u =>
+            u.username === user.username || u.email === user.email
+        );
+        if (isTaken) return false;
 
         const response = await fetch(`${API_URL}/users`, {
             method: 'POST',
@@ -32,12 +36,14 @@ export async function register(user) {  //TODO: email
             body: JSON.stringify(user)
         });
         if (!response.ok) throw new Error('Failed to register user');
+
         return true;
     } catch (error) {
         console.error('Register error:', error);
         return false;
     }
 }
+
 
 export function logout() {
     localStorage.removeItem('currentUser');

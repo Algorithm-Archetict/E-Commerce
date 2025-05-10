@@ -122,15 +122,18 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (page === 'register.html') {
         getElement('#register-form')?.addEventListener('submit', async (e) => {
             e.preventDefault();
+            const fName = getElement('#register-fName').value;
+            const lName = getElement('#register-username').value;
+            const email = getElement('#register-email').value;
             const username = getElement('#register-username').value;
             const password = getElement('#register-password').value;
             const role = getElement('#register-role').value;
-            const success = await register({ username, password, role });
+            const success = await register({ fName, lName, email, username, password, role });
             if (success) {
                 alert('Registration successful! Please login.');
                 window.location.href = 'login.html';
             } else {
-                alert('Username already exists');
+                alert('User already exists');
             }
         });
     } else if (page === 'product-details.html') {
