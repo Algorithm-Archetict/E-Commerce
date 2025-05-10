@@ -176,6 +176,65 @@ async function loadProductManagement(currentUser, dashboardContent) {
     }
 }
 
+
+
+
+{/* async function loadUserManagement(dashboardContent) {
+    try {
+        const response = await fetch(`${API_URL}/users`);
+        if (!response.ok) throw new Error('Failed to load users');
+        const users = await response.json();
+
+        dashboardContent.innerHTML = `
+            <h2>Manage Users</h2>
+            <form id="user-form" class="form">
+                <input type="hidden" id="user-id">
+                <div class="form-group">
+                    <label for="user-username">Username</label>
+                    <input type="text" id="user-username" required>
+                </div>
+                <div class="form-group">
+                    <label for="user-password">Password</label>
+                    <input type="password" id="user-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="user-role">Role</label>
+                    <select id="user-role" required>
+                        <option value="admin">Admin</option>
+                        <option value="seller">Seller</option>
+                        <option value="customer">Customer</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Save User</button>
+            </form>
+            <h3>User List</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Role</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${users.map(user => `
+                        <tr>
+                            <td>${user.username}</td>
+                            <td>${user.role}</td>
+                            <td>
+                                <button class="btn edit-user" data-user-id="${user.id}">Edit</button>
+                                <button class="btn delete-user" data-user-id="${user.id}">Delete</button>
+                            </td>
+                        </tr>
+                    `).join('')}
+                </tbody>
+            </table>
+        `;
+    } catch (error) {
+        console.error('Load user management error:', error);
+    }
+} */}
+
 async function loadUserManagement(dashboardContent) {
     try {
         const response = await fetch(`${API_URL}/users`);
@@ -186,6 +245,20 @@ async function loadUserManagement(dashboardContent) {
             <h2>Manage Users</h2>
             <form id="user-form" class="form">
                 <input type="hidden" id="user-id">
+                <div class="form-group">
+                    <label for="user-FirstName">FirstName</label>
+                    <input type="text" id="user-FirstName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="user-LastName">LastName</label>
+                    <input type="text" id="user-LastName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="user-email">E-mail</label>
+                    <input type="email" id="user-email" required>
+                </div>
                 <div class="form-group">
                     <label for="user-username">Username</label>
                     <input type="text" id="user-username" required>

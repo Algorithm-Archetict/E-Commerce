@@ -136,6 +136,26 @@
       "status": "approved",
       "salesCount": 0,
       "id": "11"
+    },
+    {
+      "id": "0c05",
+      "name": "Macbook2",
+      "price": 999,
+      "category": "Electronics",
+      "image": "https://via.placeholder.com/150",
+      "sellerId": "2",
+      "status": "approved",
+      "salesCount": 0
+    },
+    {
+      "id": "79b1",
+      "name": "Macbook3",
+      "price": 777,
+      "category": "Electronics",
+      "image": "https://via.placeholder.com/150",
+      "sellerId": "3",
+      "status": "approved",
+      "salesCount": 0
     }
   ],
   "users": [

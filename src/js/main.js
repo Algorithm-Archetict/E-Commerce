@@ -157,17 +157,47 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-async function manageUsers(user) {
+ export async function manageUsers(user) {
     try {
         const method = user.id ? 'PUT' : 'POST';
         const url = user.id ? `http://localhost:3000/users/${user.id}` : 'http://localhost:3000/users';
+        
+        // Ensure all required fields are present
+        const userData = {
+            id:user.id,
+            firstName: user.firstName,
+            lastName: user.lastName,
+            email: user.email,
+            username: user.username,
+            password: user.password,
+            role: user.role
+        };
+
         const response = await fetch(url, {
             method,
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(user)
+            body: JSON.stringify(userData)
         });
+
         if (!response.ok) throw new Error('Failed to save user');
+        alert(user.id ? 'User updated successfully!' : 'User created successfully!');
     } catch (error) {
         console.error('Manage users error:', error);
+        alert('Failed to save user. Please try again.');
     }
 }
+
+// async function manageUsers(user) {
+//     try {
+//         const method = user.id ? 'PUT' : 'POST';
+//         const url = user.id ? `http://localhost:3000/users/${user.id}` : 'http://localhost:3000/users';
+//         const response = await fetch(url, {
+//             method,
+//             headers: { 'Content-Type': 'application/json' },
+//             body: JSON.stringify(user)
+//         });
+//         if (!response.ok) throw new Error('Failed to save user');
+//     } catch (error) {
+//         console.error('Manage users error:', error);
+//     }
+// }
