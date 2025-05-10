@@ -59,7 +59,7 @@ export function updateAuthUI(user) {
     const profileLink = document.querySelector('#profile-link');
 
     if (user) {
-        userInfo.textContent = `Welcome, ${user.username}`;
+        userInfo.textContent = `Welcome, ${user.fName}`;
         loginLink.classList.add('hidden');
         registerLink.classList.add('hidden');
         logoutLink.classList.remove('hidden');

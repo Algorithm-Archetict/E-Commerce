@@ -168,6 +168,9 @@
     },
     {
       "id": "4",
+      "fName": "Alaa",
+      "lName": "Ali",
+      "email": "alaa3@gmail.com",
       "username": "customer1",
       "password": "customer123",
       "role": "customer"
