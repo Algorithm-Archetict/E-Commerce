@@ -1,7 +1,7 @@
 {
-  "name": "ecommerce-platform",
+  "name": "e-commerce",
   "version": "1.0.0",
-  "description": "A simple e-commerce platform using JSON Server",
+  "description": "A responsive e-commerce platform with vanilla JS, HTML, CSS, and JSON Server.",
   "scripts": {
     "start": "json-server --watch db.json --port 3000"
   },

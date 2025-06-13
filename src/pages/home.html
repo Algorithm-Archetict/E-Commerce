@@ -3,64 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - E-commerce Platform</title>
+    <title>Home - E-Commerce</title>
     <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/colors.css">
-    <link rel="stylesheet" href="../css/typography.css">
-    <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/products.css">
+    <link rel="stylesheet" href="../css/home.css">
 </head>
 <body>
-    <header class="header">
-        <div class="header-container">
-            <img src="../assets/images/logo.png" alt="E-commerce Logo" class="logo">
-            <h1>E-commerce Platform</h1>
-            <div id="user-info" class="user-info"></div>
-        </div>
+    <header>
+        <img src="../images/logo3.png" alt="Logo" class="logo">
+        <nav></nav>
     </header>
-    <nav class="nav">
-        <a href="home.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="cart.html">Cart</a>
-        <a href="dashboard.html" id="dashboard-link" class="hidden">Dashboard</a>
-        <a href="profile.html" id="profile-link" class="hidden">Profile</a>
-        <a href="login.html" id="login-link">Login</a>
-        <a href="register.html" id="register-link">Register</a>
-        <a href="#" id="logout-link" class="hidden">Logout</a>
-    </nav>
-    <main class="content">
+    <main>
         <section class="hero">
-            <img src="https://via.placeholder.com/1200x400?text=Shop+Now" alt="Shop Now Banner">
-            <div class="hero-text">
-                <h2>Discover Great Deals</h2>
-                <p>Shop the latest products at unbeatable prices!</p>
-                <a href="products.html" class="btn">Shop Now</a>
-            </div>
-        </section>
-        <section class="best-sellers">
-            <h2>Best Sellers</h2>
-            <div id="best-seller-grid" class="product-grid"></div>
-        </section>
-        <section class="categories">
+    <div class="hero-content">
+        <h1>Welcome to SwiftCart</h1>
+        <p>Shop the best products at unbeatable prices!</p>
+        <a href="../pages/products.html" class="hero-button">Shop Now</a>
+    </div>
+    <img src="../images/hero6.jpg" alt="Shopping experience" class="hero-image">
+</section>
+        <section id="categories">
             <h2>Shop by Category</h2>
-            <div id="category-buttons" class="category-buttons"></div>
+            <div id="category-list"></div>
         </section>
-        
-        <section class="products-by-category">
-            <h2>Products by Category</h2>
-            <div id="products-by-category" class="category-products"></div>
+        <section id="best-sellers">
+            <h2>Best Sellers</h2>
+            <div id="best-seller-list"></div>
         </section>
     </main>
-    <footer class="footer">
-        <p>© 2025 E-commerce Platform. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="#">Contact Us</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-        </div>
+    <footer>
+        <p>© 2025 E-Commerce. All rights reserved.</p>
     </footer>
-    <script src="../js/main.js" type="module"></script>
+    <script type="module" src="../js/home.js"></script>
 </body>
 </html>
